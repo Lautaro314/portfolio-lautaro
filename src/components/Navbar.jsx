@@ -15,6 +15,7 @@ export function Navbar () {
                         <NavLink to="/skills">Skills</NavLink>
                         <NavLink to="/projects">Projects</NavLink>
                         <NavLink to="/certificates">Certificates</NavLink>
+                        <NavLink to="/contact">Contact me</NavLink>
                     </nav>
                 </div>
             </header>
