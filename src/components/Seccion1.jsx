@@ -1,3 +1,4 @@
+import lautaro from '../assets/lautaro.jpeg'
 import Seccion2 from "./Seccion2"
 
 export function Seccion1 () {
@@ -5,7 +6,7 @@ export function Seccion1 () {
         <>
         <div className="article">
             <article>
-                <img className="lautaro" src="./src/assets/lautaro.jpeg" alt="" />
+                <img className="lautaro" src={lautaro} alt="" />
             </article>
             <article className="article1">
                 <h2>HOLAAA!!!</h2> 

@@ -1,5 +1,6 @@
-import {NavLink } from "react-router-dom"
-import {Seccion1} from "./Seccion1"
+import logo from"../assets/logoLautaro.png";
+import {NavLink } from "react-router-dom";
+import {Seccion1} from "./Seccion1";
 
 export function Navbar () {
 
@@ -7,7 +8,7 @@ export function Navbar () {
         <>
             <header>
                 <div className="header">
-                    <img src="./src/assets/logoLautaro.png" alt="" />
+                    <img src={logo} alt="" />
                     <h1>PORTFOLIO LAUTARO</h1>
                     <nav>
                         <NavLink to="/aboutMe">About me</NavLink>
