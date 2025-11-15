@@ -23,7 +23,7 @@ export function Footer () {
                         <input type="checkbox" className="form-check-input" id="exampleCheck1"></input>
                         <label className="form-check-label" for="exampleCheck1">Check me out</label>
                     </div>
-                    <button className= "botonProject" type="button" style={{border:'7%'}}>SUBMIT</button>
+                    <button className= "botonContact" type="button" style={{border:'7%'}}>SUBMIT</button>
             </form>
         </footer>
         </>

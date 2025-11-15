@@ -14,7 +14,8 @@ export function Seccion5 () {
                         <h5 className="card-title">Projecto 1</h5>
                         <p className='card-text1'>Plataforma online para estudiar Ingles</p>
                         <p className="card-text">Herramientas aplicadas en desarrollo web: HTML , CSS y SASS</p>
-                        <button className= "botonProject" type="button">DESCARGAR CV</button>
+                        <button className= "botonProject" type="button">VER PROYECTO</button>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
                     </div>
                 </div>
                 <div className="card" style={{width: '18rem'}}>
@@ -23,7 +24,8 @@ export function Seccion5 () {
                         <h5 className="card-title">Projecto 2</h5>
                         <p className='card-text1'>Ecommerce de productos con un carrito de compra</p>
                         <p className="card-text">Herramientas aplicadas en desarrollo web: HTML , CSS y Javascript</p>
-                        <button className= "botonProject" type="button">DESCARGAR CV</button>
+                        <button className= "botonProject" type="button">VER PROYECTO</button>
+                        <img  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
                     </div>
                 </div>
             </div>

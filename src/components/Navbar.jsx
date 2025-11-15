@@ -1,29 +1,85 @@
-import logo from"../assets/logoLautaro.png";
-import {NavLink } from "react-router-dom";
-import {Seccion1} from "./Seccion1";
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import CssBaseline from '@mui/material/CssBaseline';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+import {Seccion1} from './Seccion1'
 
-export function Navbar () {
+const drawerWidth = 240;
 
-    return (
-        <>
-            <header>
-                <div className="header">
-                    <img src={logo} alt="" />
-                    <h1>PORTFOLIO LAUTARO</h1>
-                    <nav>
-                        <NavLink to="/aboutMe">About me</NavLink>
-                        <NavLink to="/experience">Experience</NavLink>
-                        <NavLink to="/skills">Skills</NavLink>
-                        <NavLink to="/projects">Projects</NavLink>
-                        <NavLink to="/certificates">Certificates</NavLink>
-                        <NavLink to="/contact">Contact me</NavLink>
-                    </nav>
-                </div>
-            </header>
-            <Seccion1/>
-        </>
-    )
-
+export function Navbar() {
+  return (
+    <>
+    <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
+      <AppBar
+        position="fixed"
+        sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
+      >
+        <Toolbar>
+          <Typography variant="h6" noWrap component="div">
+            Permanent drawer
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
+            boxSizing: 'border-box',
+          },
+        }}
+        variant="permanent"
+        anchor="left"
+      >
+        <Toolbar />
+        <Divider />
+        <List>
+          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
+      <Box
+        component="main"
+        sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
+        >
+      </Box>
+    </Box>
+    <Seccion1/>
+  </>
+  );
 }
 
 export default Navbar
